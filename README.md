@@ -6,4 +6,4 @@ Currently a simple tcp server that return a hello string
 
 built with go build
 
-Tested with Curl on port 12345 
+Tested client server on local machine
