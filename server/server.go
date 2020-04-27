@@ -1,22 +1,16 @@
+// Simply presents an html web page. 
 package main
 
+
 import (
-	"fmt"
-	"net"
+	//"fmt"
+    "log"
+    "net/http"
 )
 
-// Super simple first version with no error handling
-// takes a tcp connection and return hello world
-
-
 func main() {
-	sock, _ := net.Listen("tcp", ":12345")
-
+	handler := http.FileServer(http.Dir("./server/test_page"))
+	http.Handle("/", handler)
 	
-	for {
-		conn, _ := sock.Accept()
-		fmt.Fprintf(conn, "Hello World!\n\r")
-		conn.Close()
-
-	}
+	log.Fatal(http.ListenAndServe(":8080", nil))
 }
