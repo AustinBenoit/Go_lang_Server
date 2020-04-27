@@ -1,6 +1,6 @@
 # Go lang Server
-A project to learn Go
-Impliment a web server in Go 
+A project to learn Go by
+impliment a web server in Go 
 
 ## Goals
 - learn more about Go Lang
