@@ -9,7 +9,7 @@ import (
 )
 
 func main() {
-	handler := http.FileServer(http.Dir("./server/test_page"))
+	handler := http.FileServer(http.Dir("./test_page"))
 	http.Handle("/", handler)
 	
 	log.Fatal(http.ListenAndServe(":8080", nil))
